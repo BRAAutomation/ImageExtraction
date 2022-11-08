@@ -10,6 +10,7 @@ args = parser.parse_args()
 
 def main(args):
     #take from all pdf files
+
     for pdfNo, pdf_fl in enumerate( glob.glob(args.pdf_file) ):
         pymupdf = PyMuPDF(pdf_fl)
         images = pymupdf.crop_imgs_from_pdf()
